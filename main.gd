@@ -1,10 +1,10 @@
 extends Node
 
-#@export var mongolin_scene: PackedScene = preload("res://mongolin.tscn")
-"""
+@export var mongolin_scene: PackedScene = preload("res://mongolin.tscn")
+
 func _on_mongolin_timer_timeout():
 # Create a new instance of the Mob scene.
-	#var mongolin = mongolin_scene.instantiate()
+	var mongolin = mongolin_scene.instantiate()
 
 	# Choose a random location on the SpawnPath.
 	# We store the reference to the SpawnLocation node.
@@ -17,4 +17,4 @@ func _on_mongolin_timer_timeout():
 
 	# Spawn the mob by adding it to the Main scene.
 	add_child(mongolin)
-"""
+

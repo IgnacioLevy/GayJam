@@ -1,19 +1,24 @@
 [gd_scene load_steps=4 format=3 uid="uid://tiwxj4br3bno"]
 
 [ext_resource type="Script" path="res://mongo.gd" id="1_5i782"]
-[ext_resource type="PackedScene" uid="uid://dwl4fkfkiv04o" path="res://art/player.glb" id="1_y2fev"]
+[ext_resource type="PackedScene" uid="uid://poqp0q726txk" path="res://art/player.glb" id="1_y2fev"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_bi8t7"]
-radius = 1.01262
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ej2eq"]
+radius = 0.9363
+height = 2.08003
 
 [node name="Mongo" type="CharacterBody3D" groups=["mongolin"]]
 collision_mask = 7
 script = ExtResource("1_5i782")
+speed = null
+fall_acceleration = null
+jump_impulse = null
+bounce_impulse = null
 
 [node name="Pivot" type="Node3D" parent="."]
 
 [node name="Character" parent="Pivot" instance=ExtResource("1_y2fev")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0.130534, 0)
-shape = SubResource("SphereShape3D_bi8t7")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.729361, 0)
+shape = SubResource("CapsuleShape3D_ej2eq")

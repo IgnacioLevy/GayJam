@@ -55,19 +55,20 @@ func _physics_process(delta):
 		
 	#un for donde checkeamos si el mongo cae sobre un mongolin
 	#de ser así, muere el mongolin
-	
+	print(get_slide_collision_count())
 	#iteramos por todas las colisiones que ocurrieron en este frame
 	for index in range(get_slide_collision_count()):
 		#una de las colisiones del mongo
 		var collision = get_slide_collision(index)
-		
+		print(collision.get_collider())
 		#si la colisión es con el piso 
 		if collision.get_collider() == null:
 			print("XDNT")
 			continue
 		
 		#si la colisión es con un mongolin 
-		if collision.get_collider().is_in_group("mongolin"):
+		if collision.get_collider().is:
+		#.is_in_group("mongolin"):
 			print("XD")
 			var mongolin = collision.get_collider()
 			#checkeamos si la colisión es  desde arriba
