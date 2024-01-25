@@ -7,13 +7,9 @@
 radius = 0.9363
 height = 2.08003
 
-[node name="Mongo" type="CharacterBody3D" groups=["mongolin"]]
+[node name="Mongo" type="CharacterBody3D"]
 collision_mask = 7
 script = ExtResource("1_5i782")
-speed = null
-fall_acceleration = null
-jump_impulse = null
-bounce_impulse = null
 
 [node name="Pivot" type="Node3D" parent="."]
 

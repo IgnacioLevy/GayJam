@@ -67,7 +67,7 @@ func _physics_process(delta):
 			continue
 		
 		#si la colisión es con un mongolin 
-		if collision.get_collider().is:
+		if collision.get_collider().is_in_group("mongolin"):
 		#.is_in_group("mongolin"):
 			print("XD")
 			var mongolin = collision.get_collider()
