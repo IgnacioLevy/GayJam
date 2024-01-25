@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://tiwxj4br3bno"]
+
+[ext_resource type="Script" path="res://mongo.gd" id="1_5i782"]
+[ext_resource type="PackedScene" uid="uid://dwl4fkfkiv04o" path="res://art/player.glb" id="1_y2fev"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_bi8t7"]
+radius = 1.01262
+
+[node name="Mongo" type="CharacterBody3D" groups=["mongolin"]]
+collision_mask = 7
+script = ExtResource("1_5i782")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Character" parent="Pivot" instance=ExtResource("1_y2fev")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0.130534, 0)
+shape = SubResource("SphereShape3D_bi8t7")
