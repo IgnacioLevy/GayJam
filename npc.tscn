@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ooslo3pj5yya"]
+
+[ext_resource type="Script" path="res://npc.gd" id="1_8w8gh"]
+[ext_resource type="PackedScene" uid="uid://bliesyldqeqkv" path="res://art/mob.glb" id="2_2msqe"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b6irl"]
+
+[node name="npc" type="CharacterBody3D" groups=["npc"]]
+script = ExtResource("1_8w8gh")
+
+[node name="pivot" type="Node3D" parent="."]
+
+[node name="character" type="Node3D" parent="pivot"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.547993, 0)
+shape = SubResource("CapsuleShape3D_b6irl")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+
+[node name="mob" parent="." instance=ExtResource("2_2msqe")]
+transform = Transform3D(0.525, 0, 0, 0, -2.29485e-08, -0.525, 0, 0.525, -2.29485e-08, 0, 0.012, 0.068)

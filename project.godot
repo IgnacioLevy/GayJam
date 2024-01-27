@@ -15,6 +15,10 @@ run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+EventHandler="*res://pelea_por_turnos/event_handler.gd"
+
 [input]
 
 move_left={

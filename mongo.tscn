@@ -7,7 +7,7 @@
 radius = 0.9363
 height = 2.08003
 
-[node name="Mongo" type="CharacterBody3D"]
+[node name="Mongo" type="CharacterBody3D" groups=["player"]]
 collision_mask = 7
 script = ExtResource("1_5i782")
 

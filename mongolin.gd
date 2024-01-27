@@ -7,6 +7,11 @@ extends CharacterBody3D
 @export var max_speed = 10
 
 
+#nombre del enemigo
+var character_name: String= "mongolin"
+#nivel creo que no lo vamos a usar
+var lvl: int = 5
+
 func _physics_process(_delta):
 	move_and_slide()
 
